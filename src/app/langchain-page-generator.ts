@@ -25,6 +25,7 @@ export class LangchainPageGenerator implements PageGenerator {
             - The note should be written in a way that is easy to read.
             - The note should be written in a way that is easy to remember.
             - The note has to be relevant to the content.
+            - The note should be written in the language of the content.
             
             Content:
 
