@@ -13,14 +13,21 @@ export class LangchainPageGenerator implements PageGenerator {
 
         this.model = new ChatGoogleGenerativeAI({
             model: "gemini-2.0-flash",
-            maxOutputTokens: 2048,
             apiKey: google_api_key
         });
 
         // Create the summary chain
         const summaryPrompt = PromptTemplate.fromTemplate(
-            `Create a concise summary of the following content:
+            `As a expert note taker, create a summary or take a note of the following content.
+            Considerations:
+            - Take into account that the note has to be concise and to the point.
+            - The note should be written in a way that is easy to understand.
+            - The note should be written in a way that is easy to read.
+            - The note should be written in a way that is easy to remember.
+            - The note has to be relevant to the content.
             
+            Content:
+
             {content}
             
             Summary:`
